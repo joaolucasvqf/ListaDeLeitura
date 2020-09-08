@@ -1,0 +1,56 @@
+<div *ngIf="livrosList.length > 0">
+    <h4> 
+        <p>Aqui estão seus livros favoritos! 😊</p>
+    </h4>
+    <div class="lista">
+        <table>
+            <colgroup>
+                <col span="1" style="width: 20%;">
+                <col span="1" style="width: 15%;">
+                <col span="1" style="width: 15%;">
+                <col span="1" style="width: 30%;">
+                <col span="1" style="width: 8%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Capa</th>
+                    <th>Titulo</th>
+                    <th>Autor(es)</th>
+                    <th>Resumo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="content" *ngFor="let item of livrosList">
+                    <td>
+                        <div class="img">
+                            <img src="{{item.thumbnail}}">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{item.title}}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{item.authors}}
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{item.description}}
+                        </div>
+                    </td>
+                    <td>
+                        <div><button class="mat-fab" [disabled]="item.favorito"
+                                (click)="RemoverLivro(item)">Remover</button></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="lista" *ngIf="livrosList.length == 0">
+    <h5>Poxa, você ainda não salvou nenhum livro como favorito... 🙁</h5>
+</div>

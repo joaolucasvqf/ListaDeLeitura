@@ -1,0 +1,56 @@
+<h4>
+  <p>Encontre seu novo livro favorito!</p>
+</h4>
+<div class="form-inline waves-light">
+  <div class="md-form mt-0 w-75">
+    <input style="width: 100%;" class="form-control mr-sm-2" type="search" (ngModelChange)="PesquisarLivros($event)"
+      [(ngModel)]="searchText" placeholder="Qual livro você está procurando?">
+  </div>
+</div>
+<div class="lista" *ngIf="livrosList.length > 0">
+  <table>
+    <colgroup>
+      <col span="1" style="width: 20%;">
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 15%;">
+      <col span="1" style="width: 30%;">
+      <col span="1" style="width: 8%;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Capa</th>
+        <th>Titulo</th>
+        <th>Autor(es)</th>
+        <th>Resumo</th>
+        <th>Favoritar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="content" *ngFor="let item of livrosList">
+        <td>
+          <div class="img">
+            <img src="{{item.thumbnail}}">
+          </div>
+        </td>
+        <td>
+          <div>
+            {{item.title}}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{item.authors}}
+          </div>
+        </td>
+        <td>
+          <div>
+            {{item.description}}
+          </div>
+        </td>
+        <td>
+          <div><button class="mat-fab" [disabled]="item.favorito" (click)="onClickButton(item)">Favoritar</button></div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
