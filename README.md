@@ -40,7 +40,7 @@ Inserir o comando Update-Database para a criação do banco de dados.
 - Fácil compreensão dos requisitos.
 
 ### Horas gastas durante o desenvolvimento:
-- Total: 
+- Total: 8h 
     - 1h - Configuração do ambiente.
     - 3h - Criação da API com seus endpoints e entidades
     - 4h - Criação do Front-End  e comunicação com a API.
