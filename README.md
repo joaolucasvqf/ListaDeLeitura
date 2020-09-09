@@ -1,6 +1,6 @@
 # ListaDeLeitura
 
-## Este projeto consiste em uma liste de leitura, a que é integrada à API do GoogleBooks, permitindo que seja realizada uma busca por títulos e então armazenados os dados em uma base local.
+## Este projeto consiste em uma lista de leitura, a que é integrada à API do GoogleBooks, permitindo que seja realizada uma busca por títulos e então armazenados os dados em uma base local.
 
 ### Tecnologias utilizadas:
 - .Net Cores 3.1
